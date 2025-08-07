@@ -142,21 +142,23 @@
     const qty = document.getElementById("quantity").value.trim();
 
     if (name && phone && icecream && qty) {
-        // Log the input values to console
-        console.log("Order Details:");
-        console.log("Name:", name);
-        console.log("Phone:", phone);
-        console.log("Ice Cream:", icecream);
-        console.log("Quantity:", qty);
+    // Log the input values to console
+    console.log("Order Details:");
+    console.log("Name:", name);
+    console.log("Phone:", phone);
+    console.log("Ice Cream:", icecream);
+    console.log("Quantity:", qty);
 
-        alert("Order placed successfully!");
-        name.value="";
-        phone.value="";
-        icecream.value="";
-        qty.value="";
-    } else {
-        alert("Please fill all the fields.");
-    }
+    alert("Order placed successfully!");
+
+    // Clear the form
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("icecream").value = "";
+    document.getElementById("quantity").value = "";
+} else {
+    alert("Please fill all the fields.");
+}
 };
     
         formCol.appendChild(orderBtn);
@@ -164,3 +166,4 @@
 </body>
 
 </html>
+
